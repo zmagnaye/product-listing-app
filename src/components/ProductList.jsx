@@ -7,7 +7,7 @@ function ProductList({ products}) {
             {products.map(product => (
                 <ProductItem key={product.id} product={product} />
             ))}
-        </div>>
+        </div>
     )
 }
 
