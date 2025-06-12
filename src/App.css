@@ -44,14 +44,14 @@
 /* App Layout */
 .products-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minx(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
   padding: 1rem;
 }
 
 /* Product Card */
-.product.item {
+.product-item {
   background-color: burlywood;
   border: 1px solid #000000;
   border-radius: 12px;
@@ -59,10 +59,10 @@
   box-shadow: 0 4px 8px rgba(143, 101, 59, 0.1);
 }
 
-/* Text Style */
+/* Text Styles */
 .product-item h2 {
-  font-size: 1.25rem;
-  color: burlywood;
+  font-size: 1.50rem;
+  color: rgb(0, 0, 0);
   margin-bottom: 0.5rem;
 }
 
