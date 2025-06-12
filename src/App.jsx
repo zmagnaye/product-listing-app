@@ -1,33 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ProductList from './components/ProductList'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products] = useState([
+    {id: 1, name: 'House Coffee', price: '$5.45', description: 'Authentic Vietnamese Style Creamy Iced Coffee'},
+    {id: 2, name: 'Strawberry Hibiscus Tea', price: '$5.00', description: 'Brewed with Real Fruits, Hibiscus Flowers, and Rooibos Teas'},
+    {id: 3, name: 'Thai Tea', price: '$5.75', description: 'A Blend of Black Teas, Vanilla Bean, Cardamom, and Anise'}
+  ])
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='app'>
+        <h1>7 Leaves Coffee Product Menu</h1>
+        <ProductList products={products}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
